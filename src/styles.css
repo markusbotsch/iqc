@@ -1,0 +1,180 @@
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+body {
+     background-color: #1a1a1a;
+     margin: 20px;
+     font-family: "Bitter", sans-serif;
+}
+
+h1,
+h2 {
+     font-family: sans-serif;
+}
+
+h1 {
+     font-size: clamp(3rem, 8vw - 2rem, 6rem);
+     margin-bottom: 25px;
+     font-weight: 900;
+     width: 300px;
+}
+
+.textcolor {
+     background: -webkit-linear-gradient(
+               74deg,
+               #d67051 0%,
+               rgba(223, 155, 82, 0.64) 87.104%,
+               transparent 100%
+          ),
+          -webkit-linear-gradient(54deg, transparent 0%, rgba(
+                              137,
+                              181,
+                              43,
+                              0.31
+                         )
+                         100%),
+          -webkit-linear-gradient(342deg, #c97e26 0%, #d9aa37 64.463%, #bace41
+                         100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+.issue-section {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 25px;
+     max-width: 1400px;
+}
+
+.issue-card {
+     background-color: #111111;
+     color: white;
+     /* min-width: 250px; */
+     height: 250px;
+     padding: 15px;
+     border-radius: 15px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.issue-card-controls {
+     text-align: right;
+}
+
+.issue-card-controls img {
+     width: 25px;
+     margin-left: 20px;
+}
+
+.issue-card-index h2 {
+     text-align: right;
+     font-size: 54px;
+     margin-bottom: 10px;
+}
+
+.issue-card-description {
+     text-align: right;
+     font-size: 14px;
+}
+
+.small {
+     font-family: sans-serif;
+     font-size: 11px;
+     padding: 10px 0;
+}
+
+.issue-add {
+     font-size: 48px;
+     font-weight: bold;
+     height: 250px;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.issue-add button {
+     font-size: 48px;
+     background: #111111;
+     font-weight: bold;
+     color: white;
+     border: 6px solid;
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     padding-bottom: 5px;
+     cursor: pointer;
+}
+
+.high {
+     color: red;
+}
+
+.medium {
+     color: orange;
+}
+
+.low {
+     color: yellow;
+}
+
+.lowest {
+     color: lightgray;
+}
+
+.overlay {
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background-color: rgba(0, 0, 0, 0.9);
+     display: grid;
+     place-content: center;
+}
+
+.add-issue {
+     background-color: #1a1a1a;
+     color: white;
+     padding: 10px;
+     border-radius: 15px;
+     width: 400px;
+     height: 300px;
+}
+
+.modal {
+     width: 300px;
+     height: 200px;
+     background-color: #1a1a1a;
+     color: white;
+     padding: 20px;
+     border-radius: 15px;
+     border: 2px solid white;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+}
+
+.modal-buttons {
+     display: flex;
+     align-items: space-around;
+}
+
+.modal-buttons button,
+.add-issue button {
+     padding: 10px 20px;
+     border: none;
+     margin: 5px;
+     color: white;
+     background-color: #111111;
+     font-size: 16px;
+     font-weight: bold;
+     border-radius: 15px;
+     cursor: pointer;
+}
